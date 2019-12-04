@@ -1,0 +1,93 @@
+@font-face {
+    font-family: AlexBrush;
+    src: url(../fonts/alex-brush/AlexBrush-Regular.ttf);
+  }
+
+@font-face {
+    font-family: Aligatai;
+    src: url(../fonts/aligatai/Aligatai.otf);
+}
+
+@font-face {
+    font-family: Reingttoon;
+    src: url('../fonts/reingttoon-demo/Reingttoon DEMO.ttf');
+}
+
+@font-face {
+    font-family: Mathilde;
+    src: url(../fonts/mathilde/mathilde.otf);
+}
+
+@font-face {
+    font-family: StillTime;
+    src: url(../fonts/still-time/still\ time.ttf);
+}
+
+body {
+    background-color: #046294;
+    color: white;
+}
+
+h1, h2 {
+    font-family: StillTime;
+    text-align: center;
+}
+
+h1 {
+    font-size: 6em;
+    padding-top: 0.3em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2em;
+    color: lightgray;
+    line-height: 0;
+    padding-bottom: 1em;
+}
+
+/* header line */
+.line-container {
+    width: 80em;
+    height: 0.3em;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    margin-top: -0.15em;
+    margin-left: -40em;
+    border-radius: 20px;
+  }
+
+  /* header line circle */
+  .line-container > div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3em;
+    height: 3em;
+    background: url(../images/apple-icon-114x114.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: solid 0.3em white;
+    border-radius: 50%;
+    position: absolute;
+    top: -1.5em;
+    left: calc(50% - 1.5em);
+  }
+
+.beats-container {
+    margin-top: 5em;
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.beats-container > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
