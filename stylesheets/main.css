@@ -2,13 +2,31 @@ body {
   background-color:#046294;
 }
 
+h1 {
+  color: white;
+  font-family: cursive;
+  text-align: center;
+  font-size: 3em;
+}
+
+/* using grid for page layout */
+#container {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  grid-template-rows: repeat(2, 1);
+  grid-template-areas:    "a b"
+                          "c c";
+}
+
 #search {
-  width: 100%;
+  grid-area: a;
   margin: 2em;
 }
 
 #search > input {
-  width: 100%;
+  float:right;
+  width: 20em;
   padding: 0.5em;
   border: none;
   border-radius: 0.5em;
@@ -20,34 +38,65 @@ body {
 }
 
 #loaderProgress {
-  width: 0%;
-  margin-top: -0.7em;
-  height: 1em;
-  background-color: #04ACFB;
-}
+  width: 0;
+  display:none;
+  margin-top: -0.4em;
+  height: 0.4em;
+  box-shadow: 0 0 3pt 2pt rgb(4,98,148);
+  background: rgb(4,98,148);
+  background: linear-gradient(90deg, rgba(4,98,148,1) 0%, rgba(4,142,209,1) 63%, rgba(4,172,251,1) 100%);}
 
 #loaderWrapper {
-  width: 100%;
-  background-color: gray;
+  width: 30em;
+  float:right;
 }
 
 #loaderWrapper, #loaderProgress {
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
   padding-right: 1.5em;
 }
 
-.container {
-  width: calc(200px * 4 + 5em);
-  margin: auto;
+/* using flexbox to show recent searches */
+#recents {
+  grid-area: b;
+  display: flex;
+  justify-content: left;
+  margin-top: 2em;
 }
 
-.results {
+.recent {
+  width: auto;
+  height: 2em;
+  background-color: darkgray;
+  border-radius: 20px;
+  list-style: none;
+  padding: 0.6em 0.6em 0 0.6em;
+  margin-right: 1em;
+  text-align: center;
+}
+
+.recent:hover {
+  cursor: pointer;
+  background-color: gray;
+}
+
+#results {
+  grid-area: c;
+  width: 60em;
+  min-height: 40em;
+  border-radius: 10px;
+  margin: auto;
   columns: 4;
   column-gap: 3em;
   padding: 3em;
+  background-color: white;
+  border: 10px solid rgba(4, 173, 251, 0.5);
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
 }
 
 .item {
   margin-bottom: 1em;
+  border-radius: 6px;
 }
