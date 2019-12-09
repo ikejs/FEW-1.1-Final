@@ -4,9 +4,9 @@ body {
 
 h1 {
   color: white;
-  font-family: cursive;
   text-align: center;
   font-size: 3em;
+  font-family: 'Neucha', cursive;
 }
 
 /* using grid for page layout */
@@ -68,17 +68,20 @@ h1 {
 .recent {
   width: auto;
   height: 2em;
-  background-color: darkgray;
-  border-radius: 20px;
+  background-color: #0387C8;
+  border-radius: 8px;
   list-style: none;
-  padding: 0.6em 0.6em 0 0.6em;
-  margin-right: 1em;
+  padding: 0.3em 0.4em 0 0.4em;
+  margin: 1em 1em 0 0;
   text-align: center;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
 }
 
 .recent:hover {
   cursor: pointer;
-  background-color: gray;
+  background-color: rgb(90, 214, 255);
 }
 
 #results {
