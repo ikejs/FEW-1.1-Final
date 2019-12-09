@@ -99,4 +99,9 @@ h1 {
 .item {
   margin-bottom: 1em;
   border-radius: 6px;
+  transition: transform .2s;
+}
+
+.item:hover {
+  transform: scale(1.5);
 }
