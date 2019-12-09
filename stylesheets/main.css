@@ -35,6 +35,9 @@ h1 {
 
 #search > input:focus {
   outline-width: 0;
+  border: 6px solid rgba(4, 173, 251, 0.5);
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
 }
 
 #loaderProgress {
