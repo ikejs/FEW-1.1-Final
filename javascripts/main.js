@@ -24,7 +24,7 @@ function searchAgain(recent) {
 function search() {
   startSlider();
   const q = searchInput.value;
-  const path = `http://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`;
+  const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`;
   fetch(path)
   .then(function(res) {
       return res.json();
